@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #Install icingaweb2
 apt-get install icingaweb2 icingacli
 

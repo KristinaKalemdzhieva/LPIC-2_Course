@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #Install packages Debian
 sudo apt install -y collectd python build-essential librrds-perl libjson-perl libhtml-parser-perl apache2
 

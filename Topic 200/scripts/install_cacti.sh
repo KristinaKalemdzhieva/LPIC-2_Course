@@ -1,5 +1,6 @@
-#Step 1: Install Required Packages
+#!/bin/bash
 
+#Step 1: Install Required Packages
 sudo apt update
 sudo apt install software-properties-common
 sudo apt install nginx
@@ -7,13 +8,11 @@ sudo apt install curl vim acl composer fping git graphviz imagemagick mariadb-cl
 mariadb-server mtr-tiny nginx-full python3-memcache python3-mysqldb snmp snmpd whois php-snmp rrdtool librrds-perl
 
 #Step 2: Install PHP on Debian
-
 sudo apt -y install php php-common
 sudo apt -y install php-cli php-fpm php-json php-pdo php-mysql php-zip php-gd \
 php-mbstring php-curl php-xml php-pear php-bcmath php-gmp php-ldap
 
 #Step 3: Database Configuration for Cacti
-
 #Login to your DataBase
 sudo systemctl enable mysql
 sudo systemctl restart mysql
@@ -61,11 +60,9 @@ innodb_buffer_pool_instances=9
 sudo systemctl restart mysql
 
 #Step 4: Configure PHP-FPM for Cacti use
-
 sudo vim /etc/php/*/fpm/php.ini
 sudo vim /etc/php/7.4/apache2/php.ini
 sudo vim /etc/php/7.4/cli/php.ini
-
 
 # Under [Date] uncoment the date.timezone line and add your timezone.
 date.timezone = Africa/Nairobi ## Input your Time zone
@@ -82,7 +79,6 @@ sudo systemctl restart php*-fpm.service
 #Step 5: Configure Nginx Webserver
 
 #Delete the default page that loads up after fresh installation of Nginx
-
 sudo rm /etc/nginx/sites-enabled/default
 
 #Create a file as shown and add the following in it

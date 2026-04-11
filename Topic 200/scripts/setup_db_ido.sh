@@ -1,4 +1,6 @@
-#Install MySQL Server
+#!/bin/bash
+
+Install MySQL Server
 apt-get install mariadb-server mariadb-client
 mysql_secure_installation
 

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 apt update && apt -y full-upgrade
 
 sudo apt install vim wget curl build-essential unzip openssl libssl-dev apache2 php libapache2-mod-php php-gd libgd-dev

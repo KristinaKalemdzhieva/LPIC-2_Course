@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #Install pre reqs and collecd in debian
 sudo apt install -y \
 git \
